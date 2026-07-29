@@ -116,8 +116,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="MuseDashMirror" Version="3.2.0"/>
+      <Folder Include="static\" />
     </ItemGroup>
+
+<!--    <ItemGroup>-->
+<!--        <PackageReference Include="MuseDashMirror" Version="3.2.0"/>-->
+<!--    </ItemGroup>-->
 
     <Target Name="CopyToModsFolder" AfterTargets="Build">
         <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll" DestinationFolder="$(GameFolder)\Mods"/>
