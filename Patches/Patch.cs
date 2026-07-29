@@ -1,10 +1,13 @@
+using Il2Cpp;
+
 namespace BanTipDisable.Patches;
 
-// [HarmonyPatch(typeof(), nameof())]
+[HarmonyPatch(typeof(PnlCheatRankTips), nameof(PnlCheatRankTips.CheckAndShow))]
 internal static class Patch
 {
-    private static void Prefix()
+    private static bool Prefix()
     {
+        return false;
     }
 
     private static void Postfix()
